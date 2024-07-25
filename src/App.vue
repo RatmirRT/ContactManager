@@ -145,7 +145,8 @@ input {
 }
 
 input:focus {
-  outline: 2px solid var(--black);
+  border: 2px solid var(--black);
+  outline: none;
 }
 
 .container {

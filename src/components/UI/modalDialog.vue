@@ -32,7 +32,7 @@ export default defineComponent({
 
 <style scoped>
 .modal_section {
-  display: block;
+  position: absolute;
 }
 
 .modal_window {
