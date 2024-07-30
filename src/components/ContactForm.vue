@@ -57,13 +57,12 @@ export default defineComponent({
       const test = pattern.test(value)
       if (test || value === '') {
         return value
-      } else {
-        let correctValue = value.slice(0, -1)
-        if (!pattern.test(correctValue)) {
-          correctValue = this.nameFilter(correctValue)
-        }
-        return correctValue
       }
+      let correctValue = value.slice(0, -1)
+      if (!pattern.test(correctValue)) {
+        correctValue = this.nameFilter(correctValue)
+      }
+      return correctValue
     },
 
     phoneInput(event: Event) {
@@ -79,13 +78,12 @@ export default defineComponent({
       const test = pattern.test(value)
       if (test) {
         return value
-      } else {
-        let correctValue = value.slice(0, -1)
-        if (!pattern.test(correctValue)) {
-          correctValue = this.phoneFilter(correctValue)
-        }
-        return correctValue
       }
+      let correctValue = value.slice(0, -1)
+      if (!pattern.test(correctValue)) {
+        correctValue = this.phoneFilter(correctValue)
+      }
+      return correctValue
     }
   }
 })
